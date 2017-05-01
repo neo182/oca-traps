@@ -9,8 +9,9 @@ public class PrimitiveParserDemo {
     public static void main(String... args) {
         String[] booleanStrings_true = {"true", "True", "TrUe", "trUE"};
         printBoolean(booleanStrings_true);
-
+        
         System.out.println("===================================================");
+        //All string that matches 'false' and all those DOES NOT match 'true' are parsed to false
         String[] booleanStrings_false = {"false", "False", "FALSE", "FAL", "TRU", "TRUEE", "!true", "#true"};
         printBoolean(booleanStrings_false);
 
@@ -27,8 +28,9 @@ public class PrimitiveParserDemo {
         
         System.out.println(new Float("22.2F"));
         
-//        String numLong = "233L"; //thows Exception
-//        System.out.println("numLong : " + Long.parseLong(numLong));
+        //Uncommenting following lines throws NumberFormatException
+//        String numLong = "233L"; 
+//        System.out.println("numLong : " + Long.parseLong(numLong)); //thows Exception
     }
 
     public static void printBoolean(String[] args) {
