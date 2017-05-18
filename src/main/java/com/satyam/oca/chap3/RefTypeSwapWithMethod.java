@@ -9,12 +9,12 @@ package com.satyam.oca.chap3;
 public class RefTypeSwapWithMethod {
 
     public static void main(String[] args) {
-        Person person1 = new Person("John");
-        Person person2 = new Person("Paul");
+        Person john = new Person("John");
+        Person paul = new Person("Paul");
 
-        swap(person1, person2);
+        swap(john, paul);
         //still prints John and Paul 
-        System.out.println(person1.name + " and " + person2.name);
+        System.out.println(john.name + " and " + paul.name);
     }
 
     public static void swap(Person p1, Person p2) {

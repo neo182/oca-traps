@@ -26,7 +26,16 @@ public class PrimitiveParserDemo {
         System.out.println("No. of bits : " + Integer.SIZE);
         System.out.println("Type : " + Integer.TYPE);
         
+        int ii = -0B1_11;
+        
+        //OBS. It is allowed to used character F and D in float-string and double-string to be parsed but not 'L' in case of Long
         System.out.println(new Float("22.2F"));
+        System.out.println(Float.parseFloat("22.2F"));
+        System.out.println(new Double("22.2d"));
+        System.out.println(Double.parseDouble("22.2d"));
+        //The following two lines are invalid:
+        // System.out.println(new Long("22L"));
+        //System.out.println(Long.parseLong("22L"));
         
         //Uncommenting following lines throws NumberFormatException
 //        String numLong = "233L"; 
