@@ -43,7 +43,14 @@ public class PredicateTest {
 
         List<Animal> backedList = Arrays.asList(animalArray);
         
+        //Examples of valid lambda expressions
+        animals.removeIf(a -> a.domestic);
+        animals.removeIf(a -> {return a.domestic;});
+        animals.removeIf((Animal a) -> a.domestic);
+        animals.removeIf((Animal a) -> {return a.domestic;});
         animals.removeIf(new DomesticTester());
+        
+        System.out.println("Simple ToString() for arraylist : " + animals.toString());
         System.out.println(Arrays.toString(animals.toArray()));
         printIfDomestic(cat, c -> c.domestic);
         printIfDomestic(cat, (a)->  {return a.domestic;});
