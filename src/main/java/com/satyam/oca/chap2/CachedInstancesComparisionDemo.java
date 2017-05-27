@@ -14,7 +14,7 @@ public class CachedInstancesComparisionDemo {
         //return FALSE
         System.out.println("long1 == long2 :: " + (long1 == long2));
 
-        long1 = Long.valueOf("1 23");
+        long1 = Long.valueOf("123");
         long2 = Long.valueOf(123);
         //OBS. return TRUE this time //results the same with long2 = 123L;
         System.out.println("long1 == long2 :: " + (long1 == long2));
