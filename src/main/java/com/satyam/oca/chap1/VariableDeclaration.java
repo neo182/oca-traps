@@ -35,6 +35,17 @@ public class VariableDeclaration {
 
         int all = 01_0;
         System.out.println(all);
+        
+        //Following lines are invalid 
+        //Short s1 = new Short(1);
+        //Byte b1 = new Byte(1);
+        
+        //But following lines are valid as Float defines a constructor that takes double as well as float
+        Float f1 = new Float(22);
+        Float f2 = new Float(22.0);
+        Float f3 = new Float(22.0f);
+        Float f4 = new Float(22.0d);
+        
     }
 }
     
