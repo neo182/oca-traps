@@ -7,6 +7,10 @@ package com.satyam.oca.chap6;
 public class RunTimeExceptionHandlerDemo {
 
     class GrandParent {
+        
+        void test(){
+            System.out.println("Testing From Grandparent");
+        }
 
         void sayHi() {
             System.out.println("Hi from GrandParent");
@@ -38,12 +42,15 @@ public class RunTimeExceptionHandlerDemo {
 
         @Override
         void sayHi() {
+            test();
+            super.sayHi();
             System.out.println("Hi from GrandChild");
         }
     }
 
     public void test() {
         GrandChild grandChild = new GrandChild();
+        grandChild.sayHi();
         System.out.println(grandChild.s);
     }
 

@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 public class DateTimeFormatterDemo {
     public static void main(String[] args) {
         LocalDateTime now = LocalDateTime.now();
+        //Only more number of y and M are allowed, all other results java.lang.IllegalArgumentException
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyyyy-MMMM-dd hh:mm:ss");
         String nowString1 = formatter.format(now);
         System.out.println("The formatter datetime 1: " + nowString1);

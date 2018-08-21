@@ -23,6 +23,7 @@ public class PolymorhpismDemo {
 
         public boolean isGeneric = false;
 
+        @Override
         public void printName() {
             System.out.println("Peacock");
         }

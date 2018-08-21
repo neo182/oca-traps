@@ -16,5 +16,12 @@ public class IntegerComparisionDemo {
         b = 1;
         System.out.println("Integer ref equals (after value) " + (a == b));
         
+        Integer c = new Integer(1);
+        int d = 1;
+        // This results true as the comparision would be made in value stored not in reference level
+        System.out.println("Integer equals with value and ref type : " + (c == d));
+        
+        //But, the following line results false as both c and a are reference type and comparision has been made in ref. level
+        System.out.println("Integer equals with value and ref type : " + (c == a));
     }
 }

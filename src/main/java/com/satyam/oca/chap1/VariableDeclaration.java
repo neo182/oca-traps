@@ -1,5 +1,6 @@
 package com.satyam.oca.chap1;
 
+import java.util.Arrays;
 /**
  *
  * @author satyam
@@ -45,6 +46,13 @@ public class VariableDeclaration {
         Float f2 = new Float(22.0);
         Float f3 = new Float(22.0f);
         Float f4 = new Float(22.0d);
+        
+        //more special ones
+        int i = 'a';
+        char c = 1;
+        
+        int integer = new Integer(2);
+                
         
     }
 }

@@ -34,6 +34,7 @@ public class DogTest {
     
     private interface TestingInterface2 extends TestingInterface1 {
 
+        @Override
         default void dosomething() {
             System.out.println("Testing interface2");
         }
@@ -45,6 +46,7 @@ public class DogTest {
 
         @Override
         public void dosomething() {
+            // calling the dosomething on TestingInterface2 with super
             TestingInterface2.super.dosomething(); 
         }
         

@@ -45,6 +45,7 @@ public class PredicateTest {
         
         //Examples of valid lambda expressions
         animals.removeIf(a -> a.domestic);
+        animals.removeIf((a) -> a.domestic);
         animals.removeIf(a -> {return a.domestic;});
         animals.removeIf((Animal a) -> a.domestic);
         animals.removeIf((Animal a) -> {return a.domestic;});
@@ -70,6 +71,6 @@ public class PredicateTest {
         public boolean test(Animal t) {
             return t.domestic;
         }
-
+        
     }
 }

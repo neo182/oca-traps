@@ -19,8 +19,7 @@ public class ArraysBinarySearchDemo {
                                              { "X3", "Y3"},
                                              { "X4", "Y4"} };
         System.out.println("The deep array to string is : ");
-        Arrays.deepToString(myStringArray);
-        
-        
+        String strFromArray = Arrays.deepToString(myStringArray);
+        System.out.println("strFromArray : " + strFromArray);
     }
 }

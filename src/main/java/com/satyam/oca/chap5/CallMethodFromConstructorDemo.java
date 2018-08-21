@@ -27,6 +27,7 @@ public class CallMethodFromConstructorDemo {
             B.print();
         }
         
+        @Override
         public void testMethod(){
             
         }

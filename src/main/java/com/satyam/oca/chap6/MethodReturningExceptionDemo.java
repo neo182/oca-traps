@@ -1,11 +1,12 @@
 package com.satyam.oca.chap6;
 
 /**
- *
+ * Very important example that shows that it it possible to return Exception from a method and it is always the
+ * values from finally block that is executed
  * @author satyam
  */
-public class MethodReturningExceptionDemo {
-
+public class MethodReturningExceptionDemo{
+    
     public static void main(String[] args) {
         try {
             RuntimeException runtimeException = getRunTimeException();
@@ -19,15 +20,16 @@ public class MethodReturningExceptionDemo {
 
     public static RuntimeException getRunTimeException() throws RuntimeException {
         try {
-            return new RuntimeException("Thowing Runtime exception from try block");
+            return new RuntimeException("Runtime exception from TRY block");
         } catch(Exception e){
-            throw new RuntimeException("Thowing another Runtime exception");
+            throw new RuntimeException("Runtime exception from CATCH block");
         }finally {
-            return new RuntimeException("Throwing Runtime exception from finally block");
+            return new RuntimeException("Runtime exception from from FINALLY block");
         }
     }
     
     public static int getValue(){
+        String s = null;
         try{
             return 1;
         }catch(Exception e){

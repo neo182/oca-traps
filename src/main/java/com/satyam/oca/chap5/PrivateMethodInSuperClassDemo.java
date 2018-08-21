@@ -4,11 +4,11 @@ package com.satyam.oca.chap5;
  *
  * @author satyam
  */
-public abstract class PrivateMethodInSuperClassDemo {
+public class PrivateMethodInSuperClassDemo {
 
-    public static class Animal {
+    public class Animal {
 
-        public String name = "Animal";
+        private String name = "Animal";
 
         private void printName() {
             System.out.println("Animal");
@@ -19,7 +19,7 @@ public abstract class PrivateMethodInSuperClassDemo {
         }
     }
 
-    public static class Cat extends Animal {
+    public class Cat extends Animal {
 
         public String name = "Cat";
 
@@ -34,12 +34,13 @@ public abstract class PrivateMethodInSuperClassDemo {
             printName();
         }
 
+        @Override
         public void sayHello() {
             System.out.println("Hello form Cat");
         }
     }
-
-    public static void main(String[] args) {
+    
+    public void test(){
         Animal animal = new Cat();
         animal.printName();
         Cat cat = new Cat();
@@ -48,5 +49,9 @@ public abstract class PrivateMethodInSuperClassDemo {
 
         animal.sayHello();
         cat.sayHello();
+    }
+
+    public static void main(String[] args) {
+         new PrivateMethodInSuperClassDemo().test();
     }
 }

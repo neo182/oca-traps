@@ -31,10 +31,6 @@ public class InstanceOfOperatorWithInterface {
             super(0);
             System.out.println("Testing");
         }
-        
-        
-        
-        
     }
     
     public void test(){
