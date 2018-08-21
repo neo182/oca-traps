@@ -1,3 +1,5 @@
 target
 target/
 nbactions.xml
+.idea/
+oca.iml
